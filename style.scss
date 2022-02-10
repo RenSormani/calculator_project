@@ -3,25 +3,6 @@
     font-family: "Oswald", sans-serif;
 }
 
-// .title {
-//     height: 1rem;
-//     display: block;
-//     margin-bottom: 3rem;
-// }
-
-// h1 {
-//     text-align: center;
-//     margin: 0;
-//     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-//     font-size: 2.1rem;
-//     font-weight: 300;
-//     color: darkslategrey;
-// }
-
-// html {
-//     height: 100%;
-// }
-
 body {
     padding: 0;
     margin: 0;
@@ -35,4 +16,50 @@ body {
     min-height: 100vh;
     grid-template-columns: repeat(4, 100px);
     grid-template-rows: minmax(120px, auto) repeat(5,100px);
+}
+
+.calculator-grid > button {
+    cursor: pointer;
+    font-size: 2rem;
+    border: 1px solid white;
+    outline: none;
+    background-color:rgb(174, 177, 177, .75)
+}
+
+.calculator-grid > button:hover {
+    cursor: pointer;
+    background-color: rgb(174, 177, 177);
+    color: white;
+    transition: 0.1s ease-in-out;
+}
+
+.calculator-grid > button:active {
+    transform: translateY(.3rem);
+    border: none;
+}
+
+.span-two {
+    grid-column: span 2;
+}
+
+.output {
+    grid-column: 1 / -1;
+    background-color: rgb(31, 30, 30, .75);
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    flex-direction: column;
+    padding: 10px;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+.output .previous-operand {
+    color: rgb(255, 255, 255, 0.75);
+    font-size: 1.5rem;
+}
+
+.output .current-operand {
+    color: white;
+    font-size: 2.5rem;
 }
