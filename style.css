@@ -38,10 +38,6 @@ body {
   border: none;
 }
 
-.span-two {
-  grid-column: span 2;
-}
-
 .output {
   grid-column: 1/-1;
   background-color: rgba(31, 30, 30, 0.75);
@@ -52,6 +48,7 @@ body {
   padding: 0.7rem;
   word-wrap: break-word;
   word-break: break-all;
+  border-radius: 1rem 1rem 0 0;
 }
 
 .output .previous-operand {
@@ -62,4 +59,8 @@ body {
 .output .current-operand {
   color: white;
   font-size: 2.5rem;
+}
+
+.span-two {
+  grid-column: span 2;
 }
