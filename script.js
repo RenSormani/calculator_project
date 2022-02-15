@@ -116,7 +116,8 @@ class Calculator {
   const allClearButton = document.querySelector('[data-all-clear]')
   const previousOperandTextElement = document.querySelector('[data-previous-operand]')
   const currentOperandTextElement = document.querySelector('[data-current-operand]')
-  
+  const firstLastSquares = document.querySelectorAll(".span-two")
+
   //create a calculator and pass everything from the constructor into it (ie the previousOperand and currentOperand text elements)
   const calculator = new Calculator(previousOperandTextElement, currentOperandTextElement)
   
@@ -153,3 +154,8 @@ class Calculator {
     calculator.delete()
     calculator.updateDisplay()
   })
+
+//makes the AC and = squares orange
+ firstLastSquares.forEach((square) => {
+    square.style.backgroundColor = "orange";
+  });
