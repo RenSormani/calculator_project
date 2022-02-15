@@ -157,5 +157,5 @@ class Calculator {
 
 //makes the AC and = squares orange
  firstLastSquares.forEach((square) => {
-    square.style.backgroundColor = "orange";
+    square.style.backgroundColor = "sandybrown";
   });
