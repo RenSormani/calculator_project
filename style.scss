@@ -18,6 +18,7 @@ body {
     grid-template-rows: minmax(6.4rem, auto) repeat(5, 6.2rem);
 }
 
+//select all buttons in calculator grid//
 .calculator-grid > button {
     cursor: pointer;
     font-size: 2rem;
@@ -40,7 +41,9 @@ body {
 
 .output {
     grid-column: 1 / -1;
-    background-color: rgb(31, 30, 30, .75);
+    background-color: rgb(31, 30, 30, .50);
+    border-radius: 1rem 1rem 0 0;
+    border: white solid 1px;
     display: flex;
     align-items: flex-end;
     justify-content: space-around;
@@ -48,7 +51,7 @@ body {
     padding: 0.7rem;
     word-wrap: break-word;
     word-break: break-all;
-    border-radius: 1rem 1rem 0 0;
+    
 }
 
 .output .previous-operand {
