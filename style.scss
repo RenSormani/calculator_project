@@ -9,34 +9,35 @@ body {
     background: lightblue;
 }
 
-.calculator-grid {
-    display: grid;
-    justify-content: center;
-    align-content: center;
-    min-height: 100vh;
-    grid-template-columns: repeat(4, 5.6rem);
-    grid-template-rows: minmax(6.4rem, auto) repeat(5, 5.6rem);
-}
 
-//select all buttons in calculator grid//
-.calculator-grid > button {
-    cursor: pointer;
-    font-size: 2rem;
-    border: 1px solid white;
-    outline: none;
-    background-color:rgb(174, 177, 177, .75);
-}
+//Create calculator grid, select all buttons in calculator grid and style//
+.calculator__grid {
+        display: grid;
+        justify-content: center;
+        align-content: center;
+        min-height: 100vh;
+        grid-template-columns: repeat(4, 5.6rem);
+        grid-template-rows: minmax(6.4rem, auto) repeat(5, 5.6rem);
 
-.calculator-grid > button:hover {
-    cursor: pointer;
-    background-color: rgb(174, 177, 177);
-    color: white;
-    transition: 0.1s ease-in-out;
-}
+    & > button {
+        cursor: pointer;
+        font-size: 2rem;
+        border: 1px solid white;
+        outline: none;
+        background-color:rgb(174, 177, 177, .75);
+    }
 
-.calculator-grid > button:active {
-    transform: translateY(.3rem);
-    border: none;
+    & > button:hover {
+        cursor: pointer;
+        background-color: rgb(174, 177, 177);
+        color: white;
+        transition: 0.1s ease-in-out;
+    }
+
+    & > button:active {
+        transform: translateY(.3rem);
+        border: none;
+    }
 }
 
 .output {
@@ -52,18 +53,17 @@ body {
     word-wrap: break-word;
     word-break: break-all;
     
+    & .previous__operand {
+        color: rgb(255, 255, 255, 0.75);
+        font-size: 1.5rem;
+    }
+
+    & .current__operand {
+        color: white;
+        font-size: 2.5rem;
+    }
 }
 
-.output .previous-operand {
-    color: rgb(255, 255, 255, 0.75);
-    font-size: 1.5rem;
-}
-
-.output .current-operand {
-    color: white;
-    font-size: 2.5rem;
-}
-
-.span-two {
+.span__two {
     grid-column: span 2;
 }
